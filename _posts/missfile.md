@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '2024-4-10-Misfile://'
+title: 'Misfile://'
 ---
 Before I start, I want to give a shout to the Charles Schwab Threat Intelligence team and our leadership for giving me the opportunity and time to give this some legs. As the new Unstructured Hunt lead, this was a thrilling find. 
 
