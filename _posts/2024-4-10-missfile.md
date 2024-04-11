@@ -9,7 +9,7 @@ Before I start, I want to give a shout to the Charles Schwab Threat Intelligence
 The team and I were discussing [the MonikerLink bug from CheckPoint](https://research.checkpoint.com/2024/the-risks-of-the-monikerlink-bug-in-microsoft-outlook-and-the-big-picture/) and whether or not you could downgrade the attack to WebDAV if SMB was blocked. We did some testing and determined nope, not possible.
 
 ![]({{site.baseurl}}/images/monikerfail.png)
-<img src="/images/monikerfail_outcome.png" width="150" style="float: center;"/>
+<img src="/images/monikerfail_outcome.png" width="1000" style="float: center;"/>
 ![]({{site.baseurl}}/images/monikerfail_outcome.png)
 ![]({{site.baseurl}}/images/monikernohash.png)
 
@@ -24,3 +24,14 @@ So I said fineeeee, lets check some Microsoft Outlook versions just in case. I n
 This led me to a wonderful new discovery – there is a “New Outlook”…and I’ve simply been ignoring the option in the top right corner this entire time.
 
 ![]({{site.baseurl}}/images/travolta.png)
+
+Alright fair play Microsoft. I attempted to find the security release notes for this “New Outlook”
+![]({{site.baseurl}}/images/feb.png)
+
+And realized I can't find them. I still to this day can’t find those so Microsoft if you have them please tell me!
+
+So I said fine, let’s try MonikerLink in New Outlook and see if we can get an NTLM hash leak. I fully expected it to fail…and it kind of did.
+
+## Testing
+
+Instead of getting the error I expected like thick Outlook, 
