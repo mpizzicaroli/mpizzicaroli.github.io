@@ -30,8 +30,6 @@ The bridge remained silent as they listened to the Nova Marshal speak.
 Pock nodded. “I scrutinized it myself. Using Terra metrics, they have a gestation of roughly a week, then a month or so of rapid maturation, typically living a 2-3-year life span. Their growth however does not stop, while they finish height wise at an estimated 1 meter, their muscular system continues to accelerate until their death. The species almost always terminates as a result of some amalgamation of cancer.”
 Astrosk bobbled his head. “Well that’s an interesting biological niche. I see we’ve been remotely observing for a year. Behavioral analytics and anatomy if you please.”
 
-<img align="right" src="/images/creature.png">
-
 Pock digested a report scrolling through his eye before he spoke. “The AI indicates aggressive tribalism. Very little infighting though. They seem to have an unwavering loyalty to their tribe; they’ll hold a sort of melee brawl to determine the new leader once theirs expires. Very brutish species truthfully, similar to the Transgoshians before humanity won the war. They’re bipedal with average proportions in relation to their short stature.”
 
 Astrosk tilted his head. “Mhmm. Diet and climate?”
