@@ -9,7 +9,7 @@ Before I start, I want to give a shout to the Charles Schwab Threat Intelligence
 The team and I were discussing [the MonikerLink bug from CheckPoint](https://research.checkpoint.com/2024/the-risks-of-the-monikerlink-bug-in-microsoft-outlook-and-the-big-picture/) and whether or not you could downgrade the attack to WebDAV if SMB was blocked. We did some testing and determined nope, not possible.
 
 ![]({{site.baseurl}}/images/monikerfail.png)
-<img src="/images/huhcat.gif" width="150" style="float: center;"/>
+<img src="/images/monikerfail_outcome.png" width="150" style="float: center;"/>
 ![]({{site.baseurl}}/images/monikerfail_outcome.png)
 ![]({{site.baseurl}}/images/monikernohash.png)
 
@@ -19,7 +19,7 @@ We knew it had been patched otherwise, and we weren’t exposed, and to make it 
 
 So I said fineeeee, lets check some Microsoft Outlook versions just in case. I noted mine, threw some queries into our SIEM, and noticed something odd. Version numbers I didn’t recognize. I sanity checked myself by pestering a colleague and he hit me with: “1.2024.214.400”, not version ‘WXYZ’ like I expected.
 
-<img src="/images/huhcat.gif" width="100" style="float: left;"/>
+<img src="/images/huhcat.gif" width="100" style="float: center;"/>
 
 This led me to a wonderful new discovery – there is a “New Outlook”…and I’ve simply been ignoring the option in the top right corner this entire time.
 
