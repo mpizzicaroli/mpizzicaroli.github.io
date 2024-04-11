@@ -35,3 +35,6 @@ So I said fine, let’s try MonikerLink in New Outlook and see if we can get an 
 ## Testing
 
 Instead of getting the error I expected like thick Outlook, 
+![]({{site.baseurl}}/images/error_okay.png)
+New Outlook asked if I wanted to open the file…but there was no hash leak…so no preview pane unfortunately.
+![]({{site.baseurl}}/images/continue.png)
