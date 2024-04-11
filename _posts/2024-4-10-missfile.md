@@ -30,22 +30,30 @@ Alright fair play Microsoft. I attempted to find the security release notes for 
 
 And realized I can't find them. I still to this day can’t find those so Microsoft if you have them please tell me!
 
-So I said fine, let’s try MonikerLink in New Outlook and see if we can get an NTLM hash leak. I fully expected it to fail…and it kind of did.
+So I said fine, let’s try MonikerLink in New Outlook and see if we can get an NTLM hash leak. I fully expected it to fail…and _it kind of did?_
 
 ## Testing
 
-Instead of getting the error I expected like thick Outlook, 
+Instead of getting the error I expected like thick Outlook,
+
 ![]({{site.baseurl}}/images/error_okay.png)
+
 New Outlook asked if I wanted to open the file…but there was no hash leak…so no preview pane unfortunately.
+
 ![]({{site.baseurl}}/images/continue.png)
+
 Playing around for a bit and running through Wireshark, I noticed something interesting: the NetBIOS domain and computer name definitely weren’t my labs.
+
 ![]({{site.baseurl}}/images/notmypc.png)
 
-I began sleuthing the internet and found that local file paths didn’t work in New Outlook, and probably as a work around, [file:// was allowed in New Outlook](https://answers.microsoft.com/en-us/outlook_com/forum/all/new-outlook-365-hyperlinking-a-local-file/f46f71ba-a1cb-4c3d-ab84-be9f88984c64)
+I began sleuthing the internet (read: googling for 5 minutes) and found that local file paths didn’t work in New Outlook, and probably as a work around, [file:// was allowed in New Outlook](https://answers.microsoft.com/en-us/outlook_com/forum/all/new-outlook-365-hyperlinking-a-local-file/f46f71ba-a1cb-4c3d-ab84-be9f88984c64)
 
 After more research and testing, what I had found was that when you sent file:// path in a link in an email, New Outlook was automatically appending it to the following url, likely due to SafeLinks.
+
 ![]({{site.baseurl}}/images/outlooklink.png)
+
 I captured a PCAP but didn’t do any break and inspect. I did notate traffic to Microsoft, and then a response from Microsoft. My theory is that since New Outlook is essentially OWA (Outlook On The Web), SafeLinks checks the domain, sees it’s a file:// call, and returns it back to the user.
+
 ![]({{site.baseurl}}/images/email_one.png)
 
 You don't need to play with OLEs and Moniker, it just accepts file:// outright.
@@ -77,7 +85,7 @@ While reading about file:// and WebDAV, I eventually realized, well…file proto
 ![]({{site.baseurl}}/images/runpowershell.png)
 ![]({{site.baseurl}}/images/gotem.png)
 
-I updated the case with Microsoft with these further findings and stopped my investigation here. I know it’s possible to provide arguments in Windows Explorer, but I was unable to get any further and did have a day job to do. I’m sure there’s some clever UNC pathing that could be done, but for me, an NTLM hash leak and a remote file execute in one vulnerability was enough.
+I updated the case with Microsoft with these further findings that you could remotely launch any executable on a host and stopped my investigation here. I know it’s possible to provide arguments in Windows Explorer, but I was unable to get any further and did have a day job to do. I’m sure there’s some clever UNC pathing that could be done, but for me, an NTLM hash leak and a remote file execute in one vulnerability was enough.
 
 ## Outcome
 
@@ -89,5 +97,7 @@ I updated the case with Microsoft with these further findings and stopped my inv
 | Apr 9         | Fix Released  |
 
 [CVE-2024-20670](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2024-20670)
+
 CVSS:3.1 8.1 / 7.1 
+
 I can't say I set out to find a CVE, but I'm **very happy** to hang my first hat on an 8.1.
