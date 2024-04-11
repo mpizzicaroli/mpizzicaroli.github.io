@@ -2,7 +2,7 @@
 layout: post
 title: 'Missfile://CVE-2024-20670'
 ---
-Before I start, I want to give a shout to the Charles Schwab Threat Intelligence team and our leadership for giving me the opportunity and time to give this some legs. As the new Unstructured Hunt lead, this was a thrilling find. 
+Before I start, I want to give a shout to the Charles Schwab Threat Intelligence team and our leadership for giving me the opportunity, time, and opinions to give this some legs. As the new Unstructured Hunt lead, this was a thrilling find. 
 
 ## Discovery
 
