@@ -2,7 +2,7 @@
 
 A window stretched the length of the command; a man’s silhouette stood amongst the fluorescent palette of celestial bodies.  His hands clasped tightly behind his back, creating a crease in an otherwise perfectly starched white uniform. Each of his shoulders bore three black stripes tipped with a star, the meekness of his frame providing a grandeur to their presence. Black boots gleamed off the marble floor upon which he stood. There wasn’t a single impressive feature in the man, sans a simple medal residing upon his breast. A pale face, broken nose and thin taut lips appeared to almost grimace as amber eyes looked introspectively into the uneven cosmos. As he peered, a dispute raged in his mind... ‘Shall I have the coffee, or the tea this morning?’. 
 
-<img align="right" src="/images/nova_martial.png">
+<img align="right" src="/images/nova_marshal.png">
 
 A static chirping in his ear clawed through his process.
 
