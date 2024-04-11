@@ -12,11 +12,11 @@ The team and I were discussing [the MonikerLink bug from CheckPoint](https://res
 ![]({{site.baseurl}}/images/monikerfail_outcome.png)
 ![]({{site.baseurl}}/images/monikernohash.png)
 
-We knew it had been patched otherwise, and we weren’t exposed, and to make it worse, our good ol' Attack Surface Management [SME dropped this lil guy on us](https://www.microsoft.com/en-us/security/blog/2023/03/24/guidance-for-investigating-attacks-using-cve-2023-23397/):
+We knew it had been patched otherwise, and we weren’t exposed, and to make it worse, our good ol' Attack Surface Management SME [dropped this lil guy on us](https://www.microsoft.com/en-us/security/blog/2023/03/24/guidance-for-investigating-attacks-using-cve-2023-23397/):
 
 > Interaction based on the WebDAV protocol is not at risk of leaking credentials to external IP addresses via this exploit technique. While the threat actor infrastructure might request Net-NTLMv2 authentication, Windows will honor the defined internet security zones and will not send Net-NTLMv2 hashes. In other words, an external threat actor can only exploit this vulnerability via the SMB protocol.
 
-So I said fineeeee, lets check some Microsoft Outlook versions just in case something got missed. I noted mine, threw some queries into our SIEM, and noticed something odd. Version numbers I didn’t recognize. I sanity checked myself by pestering a colleague and he hit me with: “1.2024.214.400”, not version ‘WXYZ’ like I expected.
+So I said _fineeeee_, lets check some Microsoft Outlook versions just in case something got missed. I noted mine, threw some queries into our SIEM, and noticed something odd. Version numbers I didn’t recognize. I sanity checked myself by pestering a colleague and he hit me with: “1.2024.214.400”, not version ‘WXYZ’ like I expected.
 
 ![]({{site.baseurl}}/images/huhcat.gif)
   
@@ -30,7 +30,7 @@ Alright fair play Microsoft. I attempted to find the security release notes for 
 
 And realized I can't find them. I still to this day can’t find those so Microsoft if you have them please tell me!
 
-So I said fine, let’s try MonikerLink in New Outlook and see if we can get an NTLM hash leak. I fully expected it to fail…and _it kind of did?_
+So I said _fineeeee_ again, let’s try MonikerLink in New Outlook and see if we can get an NTLM hash leak. I fully expected it to fail…and _it kind of did?_
 
 ## Testing
 
@@ -38,7 +38,7 @@ Instead of getting the error I expected like thick Outlook,
 
 ![]({{site.baseurl}}/images/error_okay.png)
 
-New Outlook asked if I wanted to open the file…but there was no hash leak…so no preview pane unfortunately.
+New Outlook asked if I wanted to open the file…but there was no hash leak…so no preview pane vulnerability unfortunately.
 
 ![]({{site.baseurl}}/images/continue.png)
 
@@ -46,9 +46,9 @@ Playing around for a bit and running through Wireshark, I noticed something inte
 
 ![]({{site.baseurl}}/images/notmypc.png)
 
-I began sleuthing the internet (read: googling for 5 minutes) and found that local file paths didn’t work in New Outlook, and probably as a work around, [file:// was allowed in New Outlook](https://answers.microsoft.com/en-us/outlook_com/forum/all/new-outlook-365-hyperlinking-a-local-file/f46f71ba-a1cb-4c3d-ab84-be9f88984c64)
+I began sleuthing the internet (read: googling for 5 minutes) and found that local file paths didn’t work in New Outlook, and probably as a work around, [file:// was hacked in New Outlook](https://answers.microsoft.com/en-us/outlook_com/forum/all/new-outlook-365-hyperlinking-a-local-file/f46f71ba-a1cb-4c3d-ab84-be9f88984c64)
 
-After more research and testing, what I had found was that when you sent file:// path in a link in an email, New Outlook was automatically appending it to the following url, likely due to SafeLinks.
+After more research and testing, what I had found was that when you sent the file:// path in a link in an email, New Outlook was automatically appending it to the following url, likely due to SafeLinks.
 
 ![]({{site.baseurl}}/images/outlooklink.png)
 
@@ -56,7 +56,7 @@ I captured a PCAP but didn’t do any break and inspect. I did notate traffic to
 
 ![]({{site.baseurl}}/images/email_one.png)
 
-You don't need to play with OLEs and Moniker, it just accepts file:// outright.
+There's no need to play with OLEs, Monikers, anything... it just accepts file:// outright.
 
 ![]({{site.baseurl}}/images/unsafe.png)
 
@@ -75,11 +75,11 @@ So back to 80.
 
 ![]({{site.baseurl}}/images/80works.png)
 
-And it worked…ish.I spent a day trying to get New Outlook to download the file, and all I could get was propfinds and options.
+And I got stuck. I spent a day trying to get New Outlook to download the file, and all I could get was propfinds and options. I'm sure someone with more experience with the WebDAV protocol could do something clever.
 
 ![]({{site.baseurl}}/images/wireshark.png)
 
-While reading about file:// and WebDAV, I eventually realized, well…file protocol interacts with the local system right? Let’s see if we can open Powershell.
+But while I was reading about file:// and WebDAVs interactions, I eventually realized I was starting at a tree in a forest. After all, file protocol interacts with the local system right? Let’s see if we can open Powershell.
 
 ![]({{site.baseurl}}/images/powershellemail.png)
 ![]({{site.baseurl}}/images/runpowershell.png)
