@@ -1,6 +1,6 @@
 A window stretched the length of the command; a man’s silhouette stood amongst the fluorescent palette of celestial bodies.  His hands clasped tightly behind his back, creating a crease in an otherwise perfectly starched white uniform. Each of his shoulders bore three black stripes tipped with a star, the meekness of his frame providing a grandeur to their presence. Black boots gleamed off the marble floor upon which he stood. There wasn’t a single impressive feature in the man, sans a simple medal residing upon his breast. A pale face, broken nose and thin taut lips appeared to almost grimace as amber eyes looked introspectively into the uneven cosmos. As he peered, a dispute raged in his mind... ‘Shall I have the coffee, or the tea this morning?’. 
 
-<img align="right" height=325 width=250 src="/images/nova_marshal.jpg">
+<img align="right" height=225 width=225 src="/images/nova_marshal.jpg">
 
 A static chirping in his ear clawed through his process.
 
@@ -70,6 +70,3 @@ Astrosk put his hand on Pocks’ shoulder. “Denied. Your intuition is good, bu
 The meek man in white, hands clasped behind his back, watched as an asteroid launched into the planet below, observed its impact, and mulled as fires spread across the green pearl, ‘1 or 2 sugars, in my coffee today?’
 
 <img align="center" src="/images/cracked.JPG">
-
-
-
