@@ -46,7 +46,7 @@ Playing around for a bit and running through Wireshark, I noticed something inte
 
 ![]({{site.baseurl}}/images/notmypc.png)
 
-I began sleuthing the internet (read: googling for 5 minutes) and found that local file paths didn’t work in New Outlook, and probably as a work around, [file:// was hacked in New Outlook](https://answers.microsoft.com/en-us/outlook_com/forum/all/new-outlook-365-hyperlinking-a-local-file/f46f71ba-a1cb-4c3d-ab84-be9f88984c64)
+I began sleuthing the internet (read: googling for 5 minutes) and found that local file paths didn’t work in New Outlook, and probably as a work around, [file:// was hacked into New Outlook](https://answers.microsoft.com/en-us/outlook_com/forum/all/new-outlook-365-hyperlinking-a-local-file/f46f71ba-a1cb-4c3d-ab84-be9f88984c64)
 
 After more research and testing, what I had found was that when you sent the file:// path in a link in an email, New Outlook was automatically appending it to the following url, likely due to SafeLinks.
 
