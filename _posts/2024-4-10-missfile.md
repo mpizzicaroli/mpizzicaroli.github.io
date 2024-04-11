@@ -89,15 +89,10 @@ I updated the case with Microsoft with these further findings that you could rem
 
 ## Outcome
 
-| Date          | Update        |
-|: -------------: |:-------------:|
-| Feb 28        | Reported      |
-| Feb 29        | Case Opened   |
-| Mar 5         | In Scope, Accepted, Rewarded     |
-| Apr 9         | Fix Released  |
+![]({{site.baseurl}}/images/timeline.png)
 
 [CVE-2024-20670](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2024-20670)
 
-CVSS:3.1 | 8.1 / 7.1 
+CVSS:3.1 Score - 8.1 / 7.1 
 
 I can't say I set out to find a CVE, but I'm **very happy** to hang my first hat on an 8.1.
