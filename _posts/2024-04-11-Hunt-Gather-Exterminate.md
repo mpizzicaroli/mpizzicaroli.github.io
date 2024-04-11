@@ -2,7 +2,7 @@
 
 A window stretched the length of the command; a man’s silhouette stood amongst the fluorescent palette of celestial bodies.  His hands clasped tightly behind his back, creating a crease in an otherwise perfectly starched white uniform. Each of his shoulders bore three black stripes tipped with a star, the meekness of his frame providing a grandeur to their presence. Black boots gleamed off the marble floor upon which he stood. There wasn’t a single impressive feature in the man, sans a simple medal residing upon his breast. A pale face, broken nose and thin taut lips appeared to almost grimace as amber eyes looked introspectively into the uneven cosmos. As he peered, a dispute raged in his mind... ‘Shall I have the coffee, or the tea this morning?’. 
 
-<img align="right" src="/images/dummycreds.png">
+<img align="right" src="/images/nova_martial.png">
 
 A static chirping in his ear clawed through his process.
 
@@ -29,6 +29,8 @@ The bridge remained silent as they listened to the Nova Marshal speak.
 
 Pock nodded. “I scrutinized it myself. Using Terra metrics, they have a gestation of roughly a week, then a month or so of rapid maturation, typically living a 2-3-year life span. Their growth however does not stop, while they finish height wise at an estimated 1 meter, their muscular system continues to accelerate until their death. The species almost always terminates as a result of some amalgamation of cancer.”
 Astrosk bobbled his head. “Well that’s an interesting biological niche. I see we’ve been remotely observing for a year. Behavioral analytics and anatomy if you please.”
+
+<img align="right" src="/images/creature.png">
 
 Pock digested a report scrolling through his eye before he spoke. “The AI indicates aggressive tribalism. Very little infighting though. They seem to have an unwavering loyalty to their tribe; they’ll hold a sort of melee brawl to determine the new leader once theirs expires. Very brutish species truthfully, similar to the Transgoshians before humanity won the war. They’re bipedal with average proportions in relation to their short stature.”
 
