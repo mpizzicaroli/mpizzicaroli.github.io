@@ -79,7 +79,7 @@ And I got stuck. I spent a day trying to get New Outlook to download the file, a
 
 ![]({{site.baseurl}}/images/wireshark.png)
 
-But while I was reading about file:// and WebDAVs interactions, I eventually realized I was starting at a tree in a forest. After all, file protocol interacts with the local system right? Let’s see if we can open Powershell.
+But while I was reading about file:// and WebDAVs interactions, I eventually realized I was staring at a tree in a forest. After all, file protocol interacts with the local system right? Let’s see if we can open Powershell.
 
 ![]({{site.baseurl}}/images/powershellemail.png)
 ![]({{site.baseurl}}/images/runpowershell.png)
