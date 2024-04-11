@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Misfile://'
+title: 'Misfile://CVE-2024-20670'
 ---
 Before I start, I want to give a shout to the Charles Schwab Threat Intelligence team and our leadership for giving me the opportunity and time to give this some legs. As the new Unstructured Hunt lead, this was a thrilling find. 
 
@@ -75,3 +75,21 @@ And it worked…ish.I spent a day trying to get New Outlook to download the file
 
 While reading about file:// and WebDAV, I eventually realized, well…file protocol interacts with the local system right? Let’s see if we can open Powershell.
 
+![]({{site.baseurl}}/images/powershellemail.png)
+![]({{site.baseurl}}/images/runpowershell.png)
+![]({{site.baseurl}}/images/gotem.png)
+
+I updated the case with Microsoft with these further findings and stopped my investigation here. I know it’s possible to provide arguments in Windows Explorer, but I was unable to get any further and did have a day job to do. I’m sure there’s some clever UNC pathing that could be done, but for me, an NTLM hash leak and a remote file execute in one vulnerability was enough.
+
+## Outcome
+
+| Date          | Update        |
+| ------------- |:-------------:|
+| Feb 28        | Reported      |
+| Feb 29        | Case Opened   |
+| Mar 5         | In Scope, Accepted, Rewarded     |
+| Apr 9         | Fix Released  |
+
+[CVE-2024-20670](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2024-20670)
+CVSS:3.1 8.1 / 7.1 
+I can't say I set out to find a CVE, but I'm **very happy** to hang my first hat on an 8.1.
