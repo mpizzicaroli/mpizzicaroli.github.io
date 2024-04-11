@@ -40,3 +40,25 @@ Instead of getting the error I expected like thick Outlook,
 ![]({{site.baseurl}}/images/error_okay.png)
 New Outlook asked if I wanted to open the file…but there was no hash leak…so no preview pane unfortunately.
 ![]({{site.baseurl}}/images/continue.png)
+Playing around for a bit and running through Wireshark, I noticed something interesting: the NetBIOS domain and computer name definitely weren’t my labs.
+![]({{site.baseurl}}/images/notmypc.png)
+
+I began sleuthing the internet and found that local file paths didn’t work in New Outlook, and probably as a work around, [file:// was allowed in New Outlook](https://answers.microsoft.com/en-us/outlook_com/forum/all/new-outlook-365-hyperlinking-a-local-file/f46f71ba-a1cb-4c3d-ab84-be9f88984c64)
+
+After more research and testing, what I had found was that when you sent file:// path in a link in an email, New Outlook was automatically appending it to the following url, likely due to SafeLinks.
+![]({{site.baseurl}}/images/outlooklink.png)
+I captured a PCAP but didn’t do any break and inspect. I did notate traffic to Microsoft, and then a response from Microsoft. My theory is that since New Outlook is essentially OWA (Outlook On The Web), SafeLinks checks the domain, sees it’s a file:// call, and returns it back to the user.
+![]({{site.baseurl}}/images/email_one.png)
+
+You don't need to play with OLEs and Moniker, it just accepts file:// outright.
+
+![]({{site.baseurl}}/images/unsafe.png)
+
+So, if you could get a user to enter credentials, you could get a NTLM hash leak.
+
+<p float="center">
+<img src="/images/dummycreds.png" width="500" style="float: center;"/>
+<img src="/images/realhumanbean.png" width="500" style="float: center;"/>
+</p>
+
+
