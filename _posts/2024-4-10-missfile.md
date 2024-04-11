@@ -6,6 +6,3 @@ Before I start, I want to give a shout to the Charles Schwab Threat Intelligence
 
 The team and I were discussing [the MonikerLink bug from CheckPoint](https://research.checkpoint.com/2024/the-risks-of-the-monikerlink-bug-in-microsoft-outlook-and-the-big-picture/) and whether or not you could downgrade the attack to WebDAV if SMB was blocked. We did some testing and determined nope, not possible.
 
-![monikerfail.png]({{site.baseurl}}/_posts/monikerfail.png)
-![monikerfail_outcome.png]({{site.baseurl}}/_posts/monikerfail_outcome.png)
-
