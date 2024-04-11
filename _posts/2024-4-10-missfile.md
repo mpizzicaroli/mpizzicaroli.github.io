@@ -89,7 +89,7 @@ I updated the case with Microsoft with these further findings that you could rem
 
 ## Outcome
 
-![]({{site.baseurl}}/images/timeline.png)
+![]({{site.baseurl}}/images/timeline.JPG)
 
 [CVE-2024-20670](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2024-20670)
 
