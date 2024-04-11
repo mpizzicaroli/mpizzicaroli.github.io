@@ -12,6 +12,14 @@ The team and I were discussing [the MonikerLink bug from CheckPoint](https://res
 ![]({{site.baseurl}}/images/monikerfail_outcome.png)
 ![]({{site.baseurl}}/images/monikernohash.png)
 
+
+<p float="left">
+  <img src="/images/monikerfail.png" width="100" />
+  <img src="/images/monikerfail_outcome.png" width="100" /> 
+  <img src="/images/monikernohash.png" width="100" />
+</p>
+
+
 We knew it had been patched otherwise, and we weren’t exposed, and to make it worse, our good Attack Surface Management [SME dropped this lil guy on us](https://www.microsoft.com/en-us/security/blog/2023/03/24/guidance-for-investigating-attacks-using-cve-2023-23397/):
 
 > Interaction based on the WebDAV protocol is not at risk of leaking credentials to external IP addresses via this exploit technique. While the threat actor infrastructure might request Net-NTLMv2 authentication, Windows will honor the defined internet security zones and will not send Net-NTLMv2 hashes. In other words, an external threat actor can only exploit this vulnerability via the SMB protocol.
