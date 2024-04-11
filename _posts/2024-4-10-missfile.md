@@ -9,7 +9,6 @@ Before I start, I want to give a shout to the Charles Schwab Threat Intelligence
 The team and I were discussing [the MonikerLink bug from CheckPoint](https://research.checkpoint.com/2024/the-risks-of-the-monikerlink-bug-in-microsoft-outlook-and-the-big-picture/) and whether or not you could downgrade the attack to WebDAV if SMB was blocked. We did some testing and determined nope, not possible.
 
 ![]({{site.baseurl}}/images/monikerfail.png)
-<img src="/images/monikerfail_outcome.png" width="1000" style="float: center;"/>
 ![]({{site.baseurl}}/images/monikerfail_outcome.png)
 ![]({{site.baseurl}}/images/monikernohash.png)
 
@@ -28,6 +27,7 @@ This led me to a wonderful new discovery – there is a “New Outlook”…and 
 ![]({{site.baseurl}}/images/travolta.png)
 
 Alright fair play Microsoft. I attempted to find the security release notes for this “New Outlook”
+
 ![]({{site.baseurl}}/images/feb.png)
 
 And realized I can't find them. I still to this day can’t find those so Microsoft if you have them please tell me!
@@ -61,4 +61,17 @@ So, if you could get a user to enter credentials, you could get a NTLM hash leak
 <img src="/images/realhumanbean.png" width="500" style="float: center;"/>
 </p>
 
+Quite a few clicks, but it was doable. At this point, I opened a case with Microsoft for responsible disclosure that you could leak NTLM hashes with file:// links in New Outlook.
+
+While I waited for a case, I continued to play with this vulnerability and I realized, that since we’re truly using file://, you can downgrade to WebDAV, which also means you could probably get someone to download a file!
+
+So back to 80. 
+
+![]({{site.baseurl}}/images/80works.png)
+
+And it worked…ish.I spent a day trying to get New Outlook to download the file, and all I could get was propfinds and options.
+
+![]({{site.baseurl}}/images/wireshark.png)
+
+While reading about file:// and WebDAV, I eventually realized, well…file protocol interacts with the local system right? Let’s see if we can open Powershell.
 
