@@ -19,8 +19,10 @@ We knew it had been patched otherwise, and we weren’t exposed, and to make it 
 
 So I said fineeeee, lets check some Microsoft Outlook versions just in case. I noted mine, threw some queries into our SIEM, and noticed something odd. Version numbers I didn’t recognize. I sanity checked myself by pestering a colleague and he hit me with: “1.2024.214.400”, not version ‘WXYZ’ like I expected.
 
+<p float="center">
 <img src="/images/huhcat.gif" width="100" style="float: center;"/>
-
+</p>
+  
 This led me to a wonderful new discovery – there is a “New Outlook”…and I’ve simply been ignoring the option in the top right corner this entire time.
 
 ![]({{site.baseurl}}/images/travolta.png)
