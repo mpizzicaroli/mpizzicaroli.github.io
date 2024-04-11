@@ -90,7 +90,7 @@ I updated the case with Microsoft with these further findings that you could rem
 ## Outcome
 
 | Date          | Update        |
-| ------------- |:-------------:|
+|: -------------: |:-------------:|
 | Feb 28        | Reported      |
 | Feb 29        | Case Opened   |
 | Mar 5         | In Scope, Accepted, Rewarded     |
